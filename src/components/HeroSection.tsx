@@ -1,5 +1,5 @@
 import React from "react";
-import { GraduationCap, Play, Star } from "lucide-react";
+import { Play, Star } from "lucide-react";
 
 interface HeroSectionProps {
   onOpenTrialModal: () => void;

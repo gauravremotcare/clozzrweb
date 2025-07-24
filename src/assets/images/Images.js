@@ -640,7 +640,7 @@ export const DownloadSVG = () => (
   </svg>
 );
 
-export const StarSVG = ({ color = "#683FDB" }) => (
+export const StarSVG = () => (
   <svg
     width="25"
     height="25"

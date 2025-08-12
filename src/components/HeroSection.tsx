@@ -1,5 +1,17 @@
 import React from "react";
-import { Play, Star } from "lucide-react";
+import Image from "next/image";
+import { Monitor, Star } from "lucide-react";
+
+import {
+  HeroImgBgSVG,
+  ConnectSVG,
+  ManageHealthSVG,
+  ShareSVG,
+  MonitorSVG,
+} from "../assets/images/Images";
+import { Colors } from "../assets/colors";
+import HeroImage from "../assets/HeroImgMain.png";
+import TextIcon from "./ui/TextIcon";
 
 interface HeroSectionProps {
   onOpenTrialModal: () => void;
@@ -22,25 +34,27 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
               <div className="flex items-center bg-orange-100 rounded-full px-4 py-2">
                 <Star className="w-4 h-4 text-orange-500 mr-2" />
                 <span className="text-orange-700 text-sm font-medium">
-                  Rated #1 Learning Platform
+                  Rated #1 Platform
                 </span>
               </div>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Monitor the health{" "}
+              Your Intelligent Health Companion{" "}
               <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                1-on-1 of your family
+                For You
               </span>{" "}
-              From miles apart
+              & Those You Care For
             </h1>
 
             <p className="text-xl text-gray-600 mb-8 max-w-2xl">
-              Effortlessly monitor your family and friends well-being through
-              any wearable device, no matter the distance. Track vitals,
-              activity, and sleep in real-time — all in one place. Receive
-              personalized health alerts based on severity, review historical
-              health trends, and intervene when it matters most.
+              Remotcare empowers individuals and healthcare providers to
+              connect, monitor, and manage health seamlessly — anytime,
+              anywhere.
+            </p>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl">
+              Become a valued member of remotcare community as a User or a
+              Partner
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -48,43 +62,92 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
                 onClick={onOpenTrialModal}
                 className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                Book a Free Trial
+                Sign in - Early access
               </button>
-
-              <button className="flex items-center justify-center gap-3 bg-white text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg border-2 border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all duration-200">
-                <Play className="w-5 h-5" />
-                Watch Demo
-              </button>
-            </div>
-
-            <div className="mt-8 flex items-center justify-center lg:justify-start gap-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">10K+</div>
-                <div className="text-sm text-gray-600">Users Active</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">4.9</div>
-                <div className="text-sm text-gray-600">Average Rating</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">500+</div>
-                <div className="text-sm text-gray-600">Expert Doctors</div>
-              </div>
             </div>
           </div>
 
-          {/* Right content - Hero illustration */}
-          <div className="relative">
-            <img
-              src="https://dl.dropbox.com/scl/fi/969flx92bpjrg6sc9rznz/3892670.jpg?rlkey=sexydkb5htb9i15yxx3rtqwt4&st=33fei4bi&dl=0"
-              alt="Hero Illustration"
-              className="w-full h-auto max-w-lg mx-auto lg:mx-0"
-              loading="lazy"
-            />
+          {/* Right content - SVG background + Image above */}
+          <div className="relative flex items-center justify-center">
+            <div
+              className="
+      relative 
+      w-[70vw] max-w-[35rem] 
+      aspect-square
+    "
+            >
+              {/* Background SVG */}
+              <HeroImgBgSVG className="w-full h-full" color="#F4F5FF" />
+
+              {/* Main Image - shifted slightly to left */}
+              <div className="absolute inset-0 flex items-center justify-center p-[5%]">
+                <div className="relative w-full h-full flex items-center justify-center translate-x-[-5%] ">
+                  <Image
+                    src={HeroImage}
+                    alt="Hero Illustration"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="w-full h-full object-contain"
+                    priority
+                  />
+                  <div
+                    className="grid grid-cols-2 gap-3 z-10"
+                    style={{
+                      position: "absolute",
+                      top: "30%",
+                      left: "70%",
+                      transform: "translateY(-50%)",
+                    }}
+                  >
+                    {/* Column 1 - slightly higher */}
+                    <div className="flex flex-col gap-3 translate-y-[10%]">
+                      <TextIcon
+                        text="Connect"
+                        icon={ConnectSVG}
+                        bgColor={Colors.mainColor}
+                        size="3rem"
+                        iconWidth={20}
+                        iconHeight={20}
+                        rounded={true}
+                      />
+                      <TextIcon
+                        text="Manage Health"
+                        icon={ManageHealthSVG}
+                        bgColor={Colors.mainColor}
+                        size="3rem"
+                        iconWidth={20}
+                        iconHeight={20}
+                      />
+                    </div>
+
+                    {/* Column 2 */}
+                    <div className="flex flex-col gap-3">
+                      <TextIcon
+                        text="Monitor Health"
+                        icon={MonitorSVG}
+                        bgColor={Colors.mainColor}
+                        size="3rem"
+                        iconWidth={20}
+                        iconHeight={20}
+                      />
+                      <TextIcon
+                        text="Share Data"
+                        icon={ShareSVG}
+                        bgColor={Colors.mainColor}
+                        size="3rem"
+                        iconWidth={20}
+                        iconHeight={20}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* Floating elements */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full opacity-20 animate-bounce"></div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full opacity-20 animate-bounce delay-500"></div>
+            <div className="absolute -top-[2vh] -left-[2vh] w-[8vw] h-[8vw] max-w-[4rem] max-h-[4rem] bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full opacity-20 animate-bounce"></div>
+            <div className="absolute -bottom-[2vh] -right-[2vh] w-[10vw] h-[10vw] max-w-[5rem] max-h-[5rem] bg-gradient-to-br from-purple-400 to-pink-500 rounded-full opacity-20 animate-bounce delay-500"></div>
           </div>
         </div>
       </div>

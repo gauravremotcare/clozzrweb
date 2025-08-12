@@ -23,10 +23,10 @@ const TextIcon: React.FC<TextIconProps> = ({
 }) => {
   return (
     <div
-      className="flex p-4 flex-col items-center justify-center"
+      className="flex p-4 flex-col items-center justify-center border-amber-300"
       style={{
         backgroundColor: bgColor,
-        borderRadius: rounded ? "2rem" : "0",
+        borderRadius: rounded ? "2rem" : "0.5rem",
         width: size,
         height: size,
       }}

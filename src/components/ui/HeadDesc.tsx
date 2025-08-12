@@ -11,6 +11,7 @@ interface HeadDescProps {
   iconHeight?: number;
   titleStyle?: React.CSSProperties;
   descStyle?: React.CSSProperties;
+  rounded?: boolean;
 }
 
 const HeadDesc: React.FC<HeadDescProps> = ({
@@ -23,9 +24,10 @@ const HeadDesc: React.FC<HeadDescProps> = ({
   iconHeight = 20,
   titleStyle,
   descStyle,
+  rounded = true,
 }) => {
   return (
-    <div className="flex items-start gap-3">
+    <div className="flex items-start gap-3 ">
       {/* Icon box */}
       <TextIcon
         icon={icon}
@@ -34,13 +36,14 @@ const HeadDesc: React.FC<HeadDescProps> = ({
         size={iconSize}
         iconWidth={iconWidth}
         iconHeight={iconHeight}
+        rounded={rounded}
       />
 
       {/* Title + Description */}
       <div className="flex flex-col">
         <h3
-          className="text-gray-900 font-semibold leading-snug"
-          style={{ fontSize: "1rem", ...titleStyle }}
+          className="text-gray-900 font-medium  leading-snug"
+          style={{ fontSize: "1.2rem", ...titleStyle }}
         >
           {title}
         </h3>

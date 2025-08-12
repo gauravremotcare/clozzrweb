@@ -5,33 +5,33 @@ const USPSection: React.FC = () => {
   const usps = [
     {
       icon: ManageHealthSVG,
-      title: "1-on-1 Live Sessions",
+      title: "Build Your Professional Brand",
       description:
-        "Personal attention with dedicated mentors for maximum learning efficiency",
+        "Create a standout profile that reflects your expertise, builds credibility, and helps you attract more clients.",
     },
     {
       icon: MonitorSVG,
-      title: "24/7 AI Doubt Support",
+      title: "Bring & Engage Your Client Community",
       description:
-        "Instant AI-powered assistance whenever you need help or clarification",
+        "Onboard your existing clients and deepen relationships by sharing personalised insights, wellness content, and progress updates.",
     },
     {
       icon: ManageHealthSVG,
-      title: "Progress Tracking",
+      title: "Earn More, Pay Nothing",
       description:
-        "Monitor your learning journey with in-depth analytics and reports",
+        "Enjoy zero platform fees and unlock passive income by referring clients or fellow professionals — grow your business without hidden costs.",
     },
     {
       icon: MonitorSVG,
-      title: "Custom Learning Paths",
+      title: "Collaborate with Your Team",
       description:
-        "Tailored course recommendations based on your goals and performance",
+        "Add assistants, dieticians, or coaching partners to manage clients more efficiently under one digital umbrella.",
     },
     {
       icon: ManageHealthSVG,
-      title: "Community Learning",
+      title: "Monitor Health Seamlessly",
       description:
-        "Collaborate with peers and industry experts for hands-on projects",
+        "Access real-time data from connected health devices and provide smarter, data-driven guidance through one unified dashboard.",
     },
   ];
 
@@ -40,13 +40,13 @@ const USPSection: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+          <h2 className="text-3xl md:text-3xl  text-gray-900 mb-4">
             Join as a{" "}
             <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
               Business
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl  mx-auto">
             Empower Your Practice with a Unified Digital Health Platform
           </p>
         </div>

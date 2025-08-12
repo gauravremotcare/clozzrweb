@@ -1,5 +1,5 @@
 import React from "react";
-import { Calendar, UserCheck, Video } from "lucide-react";
+import { LucideComputer, Cross, Video, ScanHeart } from "lucide-react";
 import TitleDescBox from "./ui/TitleDescBox";
 import LaptopImg from "../assets/LaptopImg.png";
 import Image from "next/image";
@@ -7,31 +7,31 @@ import Image from "next/image";
 const HowItWorks: React.FC = () => {
   const boxes = [
     {
-      icon: Calendar,
-      title: "Schedule Easily",
+      icon: ScanHeart,
+      title: "Health IoT Aggregator",
       description:
-        "Book your appointments with just a few clicks and manage your calendar effortlessly.",
+        "Integrate and manage data from all types of health IoT devices, wearables, Glucometer, BP monitor, and more in one place.",
     },
     {
-      icon: UserCheck,
-      title: "Personalized Care",
+      icon: LucideComputer,
+      title: "Unified Health Data Platform",
       description:
-        "Receive tailored healthcare solutions based on your unique needs and preferences.",
+        "Consolidate medical records, prescriptions, test results, and IoT data under a single, intelligent platform.",
     },
     {
-      icon: Video,
-      title: "Virtual Consultations",
+      icon: Cross,
+      title: "AI-Driven Health Intelligence",
       description:
-        "Connect with experts from the comfort of your home using secure video calls.",
+        "Receive proactive health alerts powered by real-time data analytics.",
     },
   ];
 
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-4xl font-normal text-gray-900 mb-6">
             Why Remotcare?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -44,7 +44,7 @@ const HowItWorks: React.FC = () => {
           {/* Laptop Image */}
 
           {/* 3 Boxes stacked vertically */}
-          <div className="flex-1 flex flex-col gap-8">
+          <div className="flex-1 flex flex-col gap-8 px-10 ">
             {boxes.map((box, index) => (
               <TitleDescBox
                 key={index}
@@ -61,7 +61,7 @@ const HowItWorks: React.FC = () => {
             <Image
               src={LaptopImg}
               alt="Laptop preview"
-              className="max-w-full h-auto rounded-2xl shadow-lg"
+              className="max-w-full h-auto rounded-2xl"
               priority
             />
           </div>

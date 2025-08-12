@@ -19,27 +19,27 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50 flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative  bg-gradient-to-br from-blue-50 via-white to-teal-50 flex items-center justify-center overflow-hidden pt-20">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full opacity-20 animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-teal-100 rounded-full opacity-20 animate-pulse delay-1000"></div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 pt-30 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="text-center lg:text-left">
-            <div className="flex items-center justify-center lg:justify-start mb-6">
+            {/* <div className="flex items-center justify-center lg:justify-start mb-6">
               <div className="flex items-center bg-orange-100 rounded-full px-4 py-2">
                 <Star className="w-4 h-4 text-orange-500 mr-2" />
                 <span className="text-orange-700 text-sm font-medium">
                   Rated #1 Platform
                 </span>
               </div>
-            </div>
+            </div> */}
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl  font-bold text-gray-900 leading-tight mb-6">
               Your Intelligent Health Companion{" "}
               <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
                 For You

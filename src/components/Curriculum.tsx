@@ -32,30 +32,34 @@ const Curriculum: React.FC = () => {
       description:
         "Get smart analytics, personalised alerts, and health risk assessments based on your data.",
     },
+    {
+      icon: ManageHealthSVG,
+      title: "Proactive AI Health Alerts",
+      description:
+        "Receive early warnings and suggested actions before potential health issues arise.",
+    },
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 mt-10 bg-white">
       {/* Reduced width container */}
       <div className="max-w-5xl mx-auto px-4">
-        {/* Header */}
-        <div className="text-start mb-16">
-          <h2 className="text-3xl md:text-3xl font-bold text-gray-900 mb-6">
-            Put yourself in the{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-              users shoes
-            </span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl">
-            Comprehensive, AI-Powered Health Monitoring for You & Your Loved
-            Ones
-          </p>
-        </div>
-
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Modules */}
           <div className="flex flex-col gap-8">
+            <div className="text-start mb-16">
+              <h2 className="text-3xl md:text-3xl  text-gray-900 mb-4">
+                Put yourself in the{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+                  users shoes
+                </span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl">
+                Comprehensive, AI-Powered Health Monitoring for You & Your Loved
+                Ones
+              </p>
+            </div>
             {modules.map((module, index) => (
               <HeadDesc
                 key={index}
@@ -77,7 +81,7 @@ const Curriculum: React.FC = () => {
               <Image
                 src={AppSplashDemo}
                 alt="App Splash Screen"
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="w-full h-auto rounded-lg"
                 priority
               />
             </div>
@@ -87,14 +91,13 @@ const Curriculum: React.FC = () => {
               <Image
                 src={AppDashboardScreen}
                 alt="App Dashboard"
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="w-full h-auto rounded-lg"
                 priority
               />
             </div>
           </div>
         </div>
-
-        {/* Footer Note */}
+        {/* Footer Note
         <div className="text-center mt-12">
           <div className="inline-flex items-center bg-blue-50 rounded-full px-6 py-3">
             <CheckCircle className="w-5 h-5 text-blue-600 mr-2" />
@@ -103,7 +106,7 @@ const Curriculum: React.FC = () => {
               materials
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

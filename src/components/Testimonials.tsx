@@ -37,13 +37,13 @@ const Testimonials: React.FC = () => {
   return (
     <section className="py-20 bg-white">
       {/* Reduced width container */}
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4 ">
         {/* Header */}
         <div className="text-start mb-16">
-          <h2 className="text-3xl md:text-3xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-3xl  text-gray-900 mb-6">
             Meet CloZzr
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl">
+          <p className="text-xl text-gray-600 ">
             CloZzr is a comprehensive mobile application designed to provide
             users with real-time health data tracking for themselves and
             seamless 24/7 monitoring of their family members health records via
@@ -52,25 +52,9 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Modules */}
-          <div className="flex flex-col gap-8">
-            {modules.map((module, index) => (
-              <HeadDesc
-                key={index}
-                title={module.title}
-                description={module.description}
-                icon={module.icon}
-                iconBgColor="#2563eb"
-                iconSize="3rem"
-                iconWidth={20}
-                iconHeight={20}
-              />
-            ))}
-          </div>
-
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
           {/* Right Column - Overlapping Images */}
-          <div className="relative flex justify-center items-center">
+          <div className="relative r gap-10">
             {/* First Image */}
             <div className="w-[60%] min-w-[200px]">
               <Image
@@ -86,10 +70,26 @@ const Testimonials: React.FC = () => {
               <Image
                 src={AppDashboardScreen}
                 alt="App Dashboard"
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="w-full h-auto rounded-lg "
                 priority
               />
             </div>
+          </div>
+          {/* Left Column - Modules */}
+          <div className="flex flex-col gap-8">
+            {modules.map((module, index) => (
+              <HeadDesc
+                key={index}
+                title={module.title}
+                description={module.description}
+                icon={module.icon}
+                iconBgColor="#2563eb"
+                iconSize="3rem"
+                iconWidth={20}
+                iconHeight={20}
+                rounded={false}
+              />
+            ))}
           </div>
         </div>
 

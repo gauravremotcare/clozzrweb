@@ -1,13 +1,11 @@
 "use client";
 
-import BottomCTA from "@/src/components/BottomCTA";
 import ChatBotModal from "@/src/components/ChatBotModal";
 import Curriculum from "@/src/components/Curriculum";
 import HeroSection from "@/src/components/HeroSection";
 import HowItWorks from "@/src/components/HowItWorks";
 import ModalForm from "@/src/components/ModalForm";
 import Navbar from "@/src/components/Navbar";
-import PricingPlans from "@/src/components/PricingPlans";
 import Testimonials from "@/src/components/Testimonials";
 import USPSection from "@/src/components/USPSection";
 import React, { useState } from "react";
@@ -41,15 +39,15 @@ function App() {
         <Testimonials />
       </section>
 
-      <section id="pricing">
+      {/* <section id="pricing">
         <PricingPlans />
-      </section>
+      </section> */}
 
-      <BottomCTA
+      {/* <BottomCTA
         onOpenTrialModal={() => setIsTrialModalOpen(true)}
         onOpenChatModal={() => setIsChatModalOpen(true)}
         onOpenCounsellorModal={() => setIsCounsellorModalOpen(true)}
-      />
+      /> */}
 
       <ModalForm
         isOpen={isTrialModalOpen}

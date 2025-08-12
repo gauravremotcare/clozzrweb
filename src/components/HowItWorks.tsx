@@ -1,138 +1,69 @@
-import React from 'react';
-import { Calendar, UserCheck, Video, Bot, BarChart3, ArrowRight } from 'lucide-react';
+import React from "react";
+import { Calendar, UserCheck, Video } from "lucide-react";
+import TitleDescBox from "./ui/TitleDescBox";
+import LaptopImg from "../assets/LaptopImg.png";
+import Image from "next/image";
 
 const HowItWorks: React.FC = () => {
-  const steps = [
+  const boxes = [
     {
       icon: Calendar,
-      title: "Book a Free Trial",
-      description: "Schedule your first session and experience our teaching methodology firsthand",
-      color: "blue"
+      title: "Schedule Easily",
+      description:
+        "Book your appointments with just a few clicks and manage your calendar effortlessly.",
     },
     {
       icon: UserCheck,
-      title: "Choose Your Mentor",
-      description: "Get matched with an expert mentor who aligns with your learning goals",
-      color: "green"
+      title: "Personalized Care",
+      description:
+        "Receive tailored healthcare solutions based on your unique needs and preferences.",
     },
     {
       icon: Video,
-      title: "Attend 1-on-1 Live Classes",
-      description: "Engage in interactive sessions tailored to your pace and learning style",
-      color: "purple"
+      title: "Virtual Consultations",
+      description:
+        "Connect with experts from the comfort of your home using secure video calls.",
     },
-    {
-      icon: Bot,
-      title: "Get AI Support + Recordings",
-      description: "Access 24/7 AI assistance and review session recordings anytime",
-      color: "orange"
-    },
-    {
-      icon: BarChart3,
-      title: "Track Weekly Progress",
-      description: "Monitor your improvement with detailed analytics and personalized feedback",
-      color: "teal"
-    }
   ];
-
-  const getColorClasses = (color: string) => {
-    const colors = {
-      blue: { gradient: 'from-blue-500 to-blue-600', bg: 'bg-blue-100', text: 'text-blue-600' },
-      green: { gradient: 'from-green-500 to-green-600', bg: 'bg-green-100', text: 'text-green-600' },
-      purple: { gradient: 'from-purple-500 to-purple-600', bg: 'bg-purple-100', text: 'text-purple-600' },
-      orange: { gradient: 'from-orange-500 to-orange-600', bg: 'bg-orange-100', text: 'text-orange-600' },
-      teal: { gradient: 'from-teal-500 to-teal-600', bg: 'bg-teal-100', text: 'text-teal-600' }
-    };
-    return colors[color as keyof typeof colors];
-  };
 
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
+        {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            How It{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-              Works
-            </span>
+            Why Remotcare?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our streamlined process ensures you get the most out of your learning journey. 
-            From your first trial class to achieving your goals, we guide you every step of the way.
+            Powering the Future of Connected, Intelligent Healthcare
           </p>
         </div>
 
-        <div className="relative">
-          {/* Desktop timeline */}
-          <div className="hidden lg:block">
-            <div className="flex items-center justify-between mb-16">
-              {steps.map((step, index) => (
-                <div key={index} className="flex items-center">
-                  <div className="relative">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${getColorClasses(step.color).gradient} rounded-full flex items-center justify-center shadow-lg`}>
-                      <step.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-gray-100">
-                      <span className="text-sm font-bold text-gray-700">{index + 1}</span>
-                    </div>
-                  </div>
-                  {index < steps.length - 1 && (
-                    <ArrowRight className="w-8 h-8 text-gray-300 mx-8" />
-                  )}
-                </div>
-              ))}
-            </div>
-            
-            <div className="grid grid-cols-5 gap-8">
-              {steps.map((step, index) => (
-                <div key={index} className="text-center">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+        {/* Image + Boxes Layout */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+          {/* Laptop Image */}
 
-          {/* Mobile/Tablet vertical layout */}
-          <div className="lg:hidden space-y-8">
-            {steps.map((step, index) => (
-              <div key={index} className="flex items-start space-x-6">
-                <div className="relative flex-shrink-0">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${getColorClasses(step.color).gradient} rounded-full flex items-center justify-center shadow-lg`}>
-                    <step.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="absolute -top-3 -right-3 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-gray-100">
-                    <span className="text-sm font-bold text-gray-700">{index + 1}</span>
-                  </div>
-                  {index < steps.length - 1 && (
-                    <div className="absolute top-20 left-8 w-0.5 h-16 bg-gray-200"></div>
-                  )}
-                </div>
-                
-                <div className="flex-1 pt-2">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
+          {/* 3 Boxes stacked vertically */}
+          <div className="flex-1 flex flex-col gap-8">
+            {boxes.map((box, index) => (
+              <TitleDescBox
+                key={index}
+                icon={box.icon}
+                title={box.title}
+                description={box.description}
+                borderColor="#4655FF"
+                bgColor="#ffffff"
+                iconSize={32}
+              />
             ))}
           </div>
-        </div>
-
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Start Your Journey Today</h3>
-            <p className="text-gray-600 mb-6">Experience the power of personalized learning with our proven methodology.</p>
-            <button className="bg-gradient-to-r from-blue-600 to-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-teal-700 transform hover:scale-105 transition-all duration-200">
-              Get Started Now
-            </button>
+          <div className="flex-1 flex justify-center">
+            <Image
+              src={LaptopImg}
+              alt="Laptop preview"
+              className="max-w-full h-auto rounded-2xl shadow-lg"
+              priority
+            />
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import ChatBotModal from "@/src/components/ChatBotModal";
 import Curriculum from "@/src/components/Curriculum";
+import Footer from "@/src/components/Footer";
 import HeroSection from "@/src/components/HeroSection";
 import HowItWorks from "@/src/components/HowItWorks";
 import ModalForm from "@/src/components/ModalForm";
@@ -67,6 +68,7 @@ function App() {
         isOpen={isChatModalOpen}
         onClose={() => setIsChatModalOpen(false)}
       />
+      <Footer />
     </div>
   );
 }

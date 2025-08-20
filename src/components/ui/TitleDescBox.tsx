@@ -19,7 +19,7 @@ const TitleDescBox: React.FC<TitleDescBoxProps> = ({
 }) => {
   return (
     <div
-      className="group rounded-2xl p-8 shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl flex items-start gap-6"
+      className="group rounded p-8 shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl flex items-start gap-6"
       style={{
         border: `0.3px solid ${borderColor}`,
         backgroundColor: bgColor,
@@ -47,7 +47,7 @@ const TitleDescBox: React.FC<TitleDescBoxProps> = ({
         >
           {title}
         </h3>
-        <p className="text-gray-600 leading-relaxed">{description}</p>
+        <p className="text-gray-600 text-base ">{description}</p>
       </div>
     </div>
   );

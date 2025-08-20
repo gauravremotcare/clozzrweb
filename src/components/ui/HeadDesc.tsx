@@ -27,7 +27,7 @@ const HeadDesc: React.FC<HeadDescProps> = ({
   rounded = true,
 }) => {
   return (
-    <div className="flex items-start gap-3 ">
+    <div className="flex items-start gap-3  ">
       {/* Icon box */}
       <TextIcon
         icon={icon}

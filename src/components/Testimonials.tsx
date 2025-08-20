@@ -37,7 +37,7 @@ const Testimonials: React.FC = () => {
   return (
     <section className="py-20 bg-white">
       {/* Reduced width container */}
-      <div className="max-w-5xl mx-auto px-4 ">
+      <div className="w-[75%] mx-auto px-4  ">
         {/* Header */}
         <div className="text-start mb-16">
           <h2 className="text-3xl md:text-3xl  text-gray-900 mb-6">
@@ -52,11 +52,11 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
+        <div className="grid grid-cols-1 lg:grid-cols-2  items-center ">
           {/* Right Column - Overlapping Images */}
           <div className="relative r gap-10">
             {/* First Image */}
-            <div className="w-[60%] min-w-[200px]">
+            <div className="w-[40%] min-w-[200px]">
               <Image
                 src={AppSplashDemo}
                 alt="App Splash Screen"
@@ -66,7 +66,7 @@ const Testimonials: React.FC = () => {
             </div>
 
             {/* Second Image - Overlapped & shifted right */}
-            <div className="w-[60%] min-w-[200px] absolute top-8 -right-8">
+            <div className="w-[45%] min-w-[200px] absolute top-8 left-45">
               <Image
                 src={AppDashboardScreen}
                 alt="App Dashboard"
@@ -94,7 +94,7 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Footer Note */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-22">
           <div className="flex justify-center">
             <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
               Download Mobile App

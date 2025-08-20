@@ -37,29 +37,26 @@ const USPSection: React.FC = () => {
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="container mx-auto px-4">
+      <div className="container w-[75%] mx-auto px-4 ">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-3xl  text-gray-900 mb-4">
-            Join as a{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-              Business
-            </span>
+          <h2 className="text-3xl md:text-3xl text-gray-900 mb-4">
+            Join as a Business
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl  mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Empower Your Practice with a Unified Digital Health Platform
           </p>
         </div>
 
-        {/* USP Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* USP Flexbox Grid */}
+        <div className="flex flex-wrap justify-center gap-8">
           {usps.map((usp, index) => {
             const Icon = usp.icon;
 
             return (
               <div
                 key={index}
-                className="group bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl text-center"
+                className="group bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl text-center w-full sm:w-[45%] lg:w-[30%]"
                 style={{
                   border: "0.3px solid #2563eb",
                 }}
@@ -67,7 +64,7 @@ const USPSection: React.FC = () => {
                 {/* Icon */}
                 <div className="flex justify-center">
                   <div
-                    className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+                    className="w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
                     style={{
                       backgroundColor: "#2563eb",
                     }}
@@ -78,14 +75,14 @@ const USPSection: React.FC = () => {
 
                 {/* Title */}
                 <h3
-                  className="text-xl font-bold mb-4 transition-colors duration-300"
+                  className="text-xl font-semibold mb-4 transition-colors duration-300"
                   style={{ color: "#2563eb" }}
                 >
                   {usp.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-base">
                   {usp.description}
                 </p>
               </div>
@@ -94,7 +91,7 @@ const USPSection: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="text-center my-16 ">
+        <div className="text-center my-16">
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Are You a Health Coach or Dietitian? Let’s Partner.
           </p>

@@ -41,14 +41,14 @@ const Curriculum: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 mt-10 bg-white">
+    <section className="py-20 mt-10 ">
       {/* Reduced width container */}
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="w-[75%] mx-auto px-4 ">
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2  items-center">
           {/* Left Column - Modules */}
-          <div className="flex flex-col gap-8">
-            <div className="text-start mb-16">
+          <div className="flex flex-col gap-8 ">
+            <div className="text-start mb-8">
               <h2 className="text-3xl md:text-3xl  text-gray-900 mb-4">
                 Put yourself in the{" "}
                 <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
@@ -70,6 +70,7 @@ const Curriculum: React.FC = () => {
                 iconSize="3rem"
                 iconWidth={20}
                 iconHeight={20}
+                rounded={false}
               />
             ))}
           </div>
@@ -77,7 +78,7 @@ const Curriculum: React.FC = () => {
           {/* Right Column - Overlapping Images */}
           <div className="relative flex justify-center items-center">
             {/* First Image */}
-            <div className="w-[60%] min-w-[200px]">
+            <div className="w-[40%] min-w-[200px]">
               <Image
                 src={AppSplashDemo}
                 alt="App Splash Screen"
@@ -87,7 +88,7 @@ const Curriculum: React.FC = () => {
             </div>
 
             {/* Second Image - Overlapped & shifted right */}
-            <div className="w-[60%] min-w-[200px] absolute top-8 -right-8">
+            <div className="w-[40%] min-w-[200px] absolute top-8 -right-5">
               <Image
                 src={AppDashboardScreen}
                 alt="App Dashboard"

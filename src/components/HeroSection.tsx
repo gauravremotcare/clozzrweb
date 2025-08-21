@@ -8,6 +8,7 @@ import {
   ManageHealthSVG,
   ShareSVG,
   MonitorSVG,
+  ArrowDesignSVG,
 } from "../assets/images/Images";
 import { Colors } from "../assets/colors";
 import HeroImage from "../assets/HeroImgMain.png";
@@ -70,7 +71,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
-                onClick={onOpenTrialModal}
+                // onClick={onOpenTrialModal}
                 className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg font-normal text-base hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Sign in - Early access
@@ -152,6 +153,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
                       />
                     </div>
                   </div>
+
+                  <ArrowDesignSVG
+                    height={51}
+                    width={108}
+                    className="absolute z-20"
+                    style={{
+                      top: "50%", // move upward/lower
+                      left: "75%", // move left/right
+                      transform: "translate(-50%, -50%) rotate(-10deg)", // tweak position + angle
+                    }}
+                  />
                 </div>
               </div>
             </div>

@@ -1,7 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
-import { ManageHealthSVG, MonitorSVG } from "../assets/images/Images";
+import {
+  AlertSVG,
+  HeartSVG,
+  LocationSVG,
+  ManageHealthSVG,
+  MedicalPlusSVG,
+  MonitorSVG,
+} from "../assets/images/Images";
 import AppDashboardScreen from "../assets/AppDashboardScreen.png";
 import AppSplashDemo from "../assets/AppSplashDemo.png";
 import HeadDesc from "./ui/HeadDesc";
@@ -15,25 +22,25 @@ const Curriculum: React.FC = () => {
         "Track all vital parameters — for yourself and your family — in real time, anytime.",
     },
     {
-      icon: ManageHealthSVG,
+      icon: LocationSVG,
       title: "Location Awareness & Safety",
       description:
         "Know where your loved ones are with real-time location tracking.",
     },
     {
-      icon: MonitorSVG,
+      icon: HeartSVG,
       title: "Access Remote Healthcare Providers",
       description:
         "Discover and connect with verified healthcare professionals and services — wherever you are.",
     },
     {
-      icon: ManageHealthSVG,
+      icon: MedicalPlusSVG,
       title: "AI-Powered Health Intelligence",
       description:
         "Get smart analytics, personalised alerts, and health risk assessments based on your data.",
     },
     {
-      icon: ManageHealthSVG,
+      icon: AlertSVG,
       title: "Proactive AI Health Alerts",
       description:
         "Receive early warnings and suggested actions before potential health issues arise.",

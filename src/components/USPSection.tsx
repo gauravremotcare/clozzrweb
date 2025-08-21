@@ -1,34 +1,42 @@
 import React from "react";
-import { ManageHealthSVG, MonitorSVG } from "../assets/images/Images";
+import {
+  ManageHealthSVG,
+  MoneySVG,
+  MonitorHealthSVG,
+  MonitorSVG,
+  OrganisationSVG,
+  PeopleSVG,
+  StarBrandSVG,
+} from "../assets/images/Images";
 
 const USPSection: React.FC = () => {
   const usps = [
     {
-      icon: ManageHealthSVG,
+      icon: StarBrandSVG,
       title: "Build Your Professional Brand",
       description:
         "Create a standout profile that reflects your expertise, builds credibility, and helps you attract more clients.",
     },
     {
-      icon: MonitorSVG,
+      icon: PeopleSVG,
       title: "Bring & Engage Your Client Community",
       description:
         "Onboard your existing clients and deepen relationships by sharing personalised insights, wellness content, and progress updates.",
     },
     {
-      icon: ManageHealthSVG,
+      icon: MoneySVG,
       title: "Earn More, Pay Nothing",
       description:
         "Enjoy zero platform fees and unlock passive income by referring clients or fellow professionals — grow your business without hidden costs.",
     },
     {
-      icon: MonitorSVG,
+      icon: OrganisationSVG,
       title: "Collaborate with Your Team",
       description:
         "Add assistants, dieticians, or coaching partners to manage clients more efficiently under one digital umbrella.",
     },
     {
-      icon: ManageHealthSVG,
+      icon: MonitorHealthSVG,
       title: "Monitor Health Seamlessly",
       description:
         "Access real-time data from connected health devices and provide smarter, data-driven guidance through one unified dashboard.",

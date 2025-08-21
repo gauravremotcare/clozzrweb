@@ -3,23 +3,28 @@ import { LucideComputer, Cross, Video, ScanHeart } from "lucide-react";
 import TitleDescBox from "./ui/TitleDescBox";
 import LaptopImg from "../assets/LaptopImg.png";
 import Image from "next/image";
+import {
+  AidrivenIntelligenceSVG,
+  HealthiotSVG,
+  UnifiedDataSVG,
+} from "../assets/images/Images";
 
 const HowItWorks: React.FC = () => {
   const boxes = [
     {
-      icon: ScanHeart,
+      icon: HealthiotSVG,
       title: "Health IoT Aggregator",
       description:
         "Integrate and manage data from all types of health IoT devices, wearables, Glucometer, BP monitor, and more in one place.",
     },
     {
-      icon: LucideComputer,
+      icon: UnifiedDataSVG,
       title: "Unified Health Data Platform",
       description:
         "Consolidate medical records, prescriptions, test results, and IoT data under a single, intelligent platform.",
     },
     {
-      icon: Cross,
+      icon: AidrivenIntelligenceSVG,
       title: "AI-Driven Health Intelligence",
       description:
         "Receive proactive health alerts powered by real-time data analytics.",

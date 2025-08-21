@@ -26,12 +26,7 @@ const TitleDescBox: React.FC<TitleDescBoxProps> = ({
       }}
     >
       {/* Left: Icon */}
-      <div
-        className="w-16 h-16 rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
-        style={{
-          backgroundColor: `${borderColor}15`, // light transparent background
-        }}
-      >
+      <div className="w-18 h-18 rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
         <Icon
           width={iconSize}
           height={iconSize}

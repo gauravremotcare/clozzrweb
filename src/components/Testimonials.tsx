@@ -1,7 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
-import { ManageHealthSVG, MonitorSVG } from "../assets/images/Images";
+import {
+  AlertSVG,
+  FamilyCareSVG,
+  HealthcareIntegSVG,
+  ManageHealthSVG,
+  MonitorSVG,
+} from "../assets/images/Images";
 import AppDashboardScreen from "../assets/ClozzrHomeApp.png";
 import AppSplashDemo from "../assets/AppSplashDemo.png";
 import HeadDesc from "./ui/HeadDesc";
@@ -15,19 +21,19 @@ const Testimonials: React.FC = () => {
         "Continuous tracking of vital signs and health metrics using smart IoT devices",
     },
     {
-      icon: ManageHealthSVG,
+      icon: FamilyCareSVG,
       title: "Family Care Network",
       description:
         "Connect with family members to share health updates and coordinate care",
     },
     {
-      icon: MonitorSVG,
+      icon: AlertSVG,
       title: "Smart Alerts",
       description:
         "Get notified about medication times, health changes, and emergencies",
     },
     {
-      icon: ManageHealthSVG,
+      icon: HealthcareIntegSVG,
       title: "Healthcare Integration",
       description:
         "Share data with doctors and healthcare providers seamlessly.",

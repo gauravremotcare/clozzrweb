@@ -23,7 +23,7 @@ const TextIcon: React.FC<TextIconProps> = ({
 }) => {
   return (
     <div
-      className="flex p-4 flex-col items-center justify-center border-amber-300"
+      className="flex p-1 flex-col items-center justify-center border-amber-300"
       style={{
         backgroundColor: bgColor,
         borderRadius: rounded ? "2rem" : "0.5rem",
@@ -40,7 +40,7 @@ const TextIcon: React.FC<TextIconProps> = ({
         <span
           className="text-center font-medium leading-tight text-white"
           style={{
-            fontSize: "0.55rem", // default smaller text
+            fontSize: "0.4rem",
             lineHeight: 1.1,
             ...textStyle,
           }}

@@ -10,27 +10,27 @@ const Testimonials: React.FC = () => {
   const modules = [
     {
       icon: MonitorSVG,
-      title: "Remote Health Monitoring",
+      title: "24/7 Health Monitoring",
       description:
-        "Track all vital parameters — for yourself and your family — in real time, anytime.",
+        "Continuous tracking of vital signs and health metrics using smart IoT devices",
     },
     {
       icon: ManageHealthSVG,
-      title: "Location Awareness & Safety",
+      title: "Family Care Network",
       description:
-        "Know where your loved ones are with real-time location tracking.",
+        "Connect with family members to share health updates and coordinate care",
     },
     {
       icon: MonitorSVG,
-      title: "Access Remote Healthcare Providers",
+      title: "Smart Alerts",
       description:
-        "Discover and connect with verified healthcare professionals and services — wherever you are.",
+        "Get notified about medication times, health changes, and emergencies",
     },
     {
       icon: ManageHealthSVG,
-      title: "AI-Powered Health Intelligence",
+      title: "Healthcare Integration",
       description:
-        "Get smart analytics, personalised alerts, and health risk assessments based on your data.",
+        "Share data with doctors and healthcare providers seamlessly.",
     },
   ];
 
@@ -39,11 +39,11 @@ const Testimonials: React.FC = () => {
       {/* Reduced width container */}
       <div className="w-[75%] mx-auto px-4  ">
         {/* Header */}
-        <div className="text-start mb-16">
-          <h2 className="text-3xl md:text-3xl  text-gray-900 mb-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-4xl font-normal text-gray-900 mb-6">
             Meet CloZzr
           </h2>
-          <p className="text-xl text-gray-600 ">
+          <p className="text-base text-black max-w-3xl mx-auto">
             CloZzr is a comprehensive mobile application designed to provide
             users with real-time health data tracking for themselves and
             seamless 24/7 monitoring of their family members health records via

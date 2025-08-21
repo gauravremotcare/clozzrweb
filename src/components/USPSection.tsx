@@ -40,10 +40,10 @@ const USPSection: React.FC = () => {
       <div className="container w-[75%] mx-auto px-4 ">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-3xl text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-3xl text-black mb-4">
             Join as a Business
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-black max-w-3xl mx-auto">
             Empower Your Practice with a Unified Digital Health Platform
           </p>
         </div>
@@ -92,17 +92,17 @@ const USPSection: React.FC = () => {
 
         {/* Stats Section */}
         <div className="text-center my-16">
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-black max-w-3xl mx-auto">
             Are You a Health Coach or Dietitian? Let’s Partner.
           </p>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-4">
+          <p className="text-xl text-black max-w-3xl mx-auto mt-4">
             Bring your clients, offer richer services, and earn more — all with
             zero platform fees.
           </p>
         </div>
 
         <div className="flex justify-center">
-          <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+          <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg font-normal text-base hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
             Join as a Partner
           </button>
         </div>

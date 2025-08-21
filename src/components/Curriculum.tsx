@@ -49,13 +49,13 @@ const Curriculum: React.FC = () => {
           {/* Left Column - Modules */}
           <div className="flex flex-col gap-8 ">
             <div className="text-start mb-8">
-              <h2 className="text-3xl md:text-3xl  text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-3xl  text-black mb-4">
                 Put yourself in the{" "}
                 <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
                   users shoes
                 </span>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl">
+              <p className="text-xl text-black max-w-3xl">
                 Comprehensive, AI-Powered Health Monitoring for You & Your Loved
                 Ones
               </p>

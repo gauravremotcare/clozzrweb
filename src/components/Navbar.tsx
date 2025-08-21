@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, GraduationCap, ChevronDown } from "lucide-react";
+import { Menu, X, HomeIcon, Home } from "lucide-react";
 
 import { RemotCareLogo } from "../assets/images/Images";
 interface NavbarProps {
@@ -68,18 +68,14 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenTrialModal }) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-600 rounded-xl flex items-center justify-center">
-              <GraduationCap className="w-6 h-6 text-white" />
+          <div className="flex items-center">
+            <div className="w-15 h-15   rounded-xl flex items-center justify-center">
               <RemotCareLogo />
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-poppins font-bold text-gray-900">
                 Remotcare
               </h1>
-              <p className="text-xs font-poppins text-gray-600">
-                Health monitoring platform
-              </p>
             </div>
           </div>
 
@@ -108,14 +104,13 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenTrialModal }) => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <button
-              onClick={onOpenTrialModal}
-              className="bg-gradient-to-r from-blue-600 to-teal-600 text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-teal-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              // onClick={onOpenTrialModal}
+              className=" text-white border border-indigo-400 px-4 py-2 rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-teal-700 transform hover:scale-105 transition-all duration-200  hover:shadow-xl"
             >
-              Free Trial
+              <Home className="w-8 h-8 text-indigo-700 font-light" />
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center justify-center transition-colors duration-200"

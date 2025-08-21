@@ -34,17 +34,15 @@ const HowItWorks: React.FC = () => {
           <h2 className="text-4xl md:text-4xl font-normal text-gray-900 mb-6">
             Why Remotcare?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-black max-w-3xl mx-auto">
             Powering the Future of Connected, Intelligent Healthcare
           </p>
         </div>
 
         {/* Image + Boxes Layout */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
-          {/* Laptop Image */}
-
+        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-center gap-8">
           {/* 3 Boxes stacked vertically */}
-          <div className="flex-1 flex flex-col gap-8 px-10 ">
+          <div className="flex-1 flex flex-col gap-8 px-10">
             {boxes.map((box, index) => (
               <TitleDescBox
                 key={index}
@@ -57,7 +55,9 @@ const HowItWorks: React.FC = () => {
               />
             ))}
           </div>
-          <div className="flex-1 flex justify-center">
+
+          {/* Laptop Image */}
+          <div className="flex-1 flex justify-center items-center ">
             <Image
               src={LaptopImg}
               alt="Laptop preview"

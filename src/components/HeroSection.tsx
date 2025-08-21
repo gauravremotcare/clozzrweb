@@ -38,7 +38,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
                 </span>
               </div>
             </div> */}
-
             <h1 className="text-4xl md:text-5xl  font-bold text-gray-900 leading-tight mb-6">
               Your Intelligent Health Companion{" "}
               <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
@@ -46,21 +45,33 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
               </span>{" "}
               & Those You Care For
             </h1>
-
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl">
+            <p className="text-xl text-black mb-8 max-w-2xl">
               Remotcare empowers individuals and healthcare providers to
               connect, monitor, and manage health seamlessly — anytime,
               anywhere.
             </p>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl">
-              Become a valued member of remotcare community as a User or a
-              Partner
+            <p className="text-xl text-black mb-8 max-w-2xl">
+              Become a valued member of remotcare community as a{" "}
+              <a
+                href="/user"
+                style={{ color: Colors.textLink }}
+                className="underline"
+              >
+                User
+              </a>{" "}
+              or a{" "}
+              <a
+                href="/partner"
+                style={{ color: Colors.textLink }}
+                className="underline"
+              >
+                Partner
+              </a>
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
                 onClick={onOpenTrialModal}
-                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg font-normal text-base hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Sign in - Early access
               </button>
@@ -106,18 +117,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
                         text="Connect"
                         icon={ConnectSVG}
                         bgColor={Colors.mainColor}
-                        size="3rem"
-                        iconWidth={20}
-                        iconHeight={20}
+                        size="3.7rem"
+                        iconWidth={25}
+                        iconHeight={25}
                         rounded={true}
                       />
                       <TextIcon
                         text="Manage Health"
                         icon={ManageHealthSVG}
                         bgColor={Colors.mainColor}
-                        size="3rem"
-                        iconWidth={20}
-                        iconHeight={20}
+                        size="3.7rem"
+                        iconWidth={25}
+                        iconHeight={25}
                       />
                     </div>
 
@@ -127,17 +138,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
                         text="Monitor Health"
                         icon={MonitorSVG}
                         bgColor={Colors.mainColor}
-                        size="3rem"
-                        iconWidth={20}
-                        iconHeight={20}
+                        size="3.7rem"
+                        iconWidth={25}
+                        iconHeight={25}
                       />
                       <TextIcon
                         text="Share Data"
                         icon={ShareSVG}
                         bgColor={Colors.mainColor}
-                        size="3rem"
-                        iconWidth={20}
-                        iconHeight={20}
+                        size="3.7rem"
+                        iconWidth={25}
+                        iconHeight={25}
                       />
                     </div>
                   </div>

@@ -118,7 +118,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
                         text="Connect"
                         icon={ConnectSVG}
                         bgColor={Colors.mainColor}
-                        size="3.7rem"
+                        size="4.2rem"
                         iconWidth={25}
                         iconHeight={25}
                         rounded={true}
@@ -127,7 +127,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
                         text="Manage Health"
                         icon={ManageHealthSVG}
                         bgColor={Colors.mainColor}
-                        size="3.7rem"
+                        size="4.2rem"
                         iconWidth={25}
                         iconHeight={25}
                       />
@@ -139,7 +139,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
                         text="Monitor Health"
                         icon={MonitorSVG}
                         bgColor={Colors.mainColor}
-                        size="3.7rem"
+                        size="4.2rem"
                         iconWidth={25}
                         iconHeight={25}
                       />
@@ -147,7 +147,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
                         text="Share Data"
                         icon={ShareSVG}
                         bgColor={Colors.mainColor}
-                        size="3.7rem"
+                        size="4.2rem"
                         iconWidth={25}
                         iconHeight={25}
                       />

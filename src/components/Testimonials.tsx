@@ -102,7 +102,10 @@ const Testimonials: React.FC = () => {
         {/* Footer Note */}
         <div className="text-center mt-22">
           <div className="flex justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+            <button
+              // onClick={onOpenTrialModal}
+              className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg font-normal text-base hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            >
               Download Mobile App
             </button>
           </div>

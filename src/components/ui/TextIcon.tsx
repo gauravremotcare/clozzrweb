@@ -40,7 +40,7 @@ const TextIcon: React.FC<TextIconProps> = ({
         <span
           className="text-center font-medium leading-tight text-white"
           style={{
-            fontSize: "0.4rem",
+            fontSize: "0.8rem",
             lineHeight: 1.1,
             ...textStyle,
           }}

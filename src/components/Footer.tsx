@@ -9,72 +9,13 @@ export default function Footer() {
   return (
     <footer className="bg-[#041a2f] text-white">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
-          {/* Products */}
-          <div>
-            <h4 className="font-semibold mb-4">Products</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#">
-                  <span className="hover:underline">Overview</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:underline">Solutions</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:underline">Pricing</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:underline">Customers</span>
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="#">
-                  <span className="hover:underline">About</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:underline">Investor Relations</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:underline">Jobs</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:underline">Press</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:underline">Blog</span>
-                </Link>
-              </li>
-            </ul>
-          </div>
-
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 text-sm">
           {/* Support */}
           <div>
             <h4 className="font-semibold mb-4">Support</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="#">
+                <Link href="/contact">
                   <span className="hover:underline">Contact</span>
                 </Link>
               </li>
@@ -85,11 +26,11 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#">
-                  <span className="hover:underline">Chat</span>
+                  <span className="hover:underline">Blog</span>
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href="/faq">
                   <span className="hover:underline">FAQ</span>
                 </Link>
               </li>
@@ -102,14 +43,6 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/terms-and-conditions"
-                  onClick={() => router.push("/terms-and-conditions")}
-                >
-                  <span className="hover:underline">Terms and conditions</span>
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/privacypolicy"
                   onClick={() => router.push("/privacypolicy")}
                 >
@@ -118,17 +51,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/cancellation-refundpolicy"
-                  onClick={() => router.push("/cancellation-refundpolicy")}
+                  href="/terms-and-conditions"
+                  onClick={() => router.push("/terms-and-conditions")}
                 >
-                  <span className="hover:underline">
-                    Cancellation and refund
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:underline">Cookie settings</span>
+                  <span className="hover:underline">Terms and conditions</span>
                 </Link>
               </li>
             </ul>
@@ -155,7 +81,10 @@ export default function Footer() {
 
         {/* Social icons and copyright */}
         <div className="mt-8 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
-          <p>© {new Date().getFullYear()} Remotcare. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Remotcare. All rights reserved - Get
+            fit with RemotCare
+          </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-white" aria-label="LinkedIn">
               <FaLinkedin size={20} />

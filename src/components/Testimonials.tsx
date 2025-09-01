@@ -1,18 +1,19 @@
 import React from "react";
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
 import {
   AlertSVG,
   FamilyCareSVG,
   HealthcareIntegSVG,
-  ManageHealthSVG,
   MonitorSVG,
 } from "../assets/images/Images";
 import AppDashboardScreen from "../assets/ClozzrHomeApp.png";
 import AppSplashDemo from "../assets/AppSplashDemo.png";
 import HeadDesc from "./ui/HeadDesc";
+interface TestimonialInterface {
+  onOpenTrialModal: () => void;
+}
 
-const Testimonials: React.FC = () => {
+const Testimonials: React.FC<TestimonialInterface> = ({ onOpenTrialModal }) => {
   const modules = [
     {
       icon: MonitorSVG,
@@ -89,7 +90,7 @@ const Testimonials: React.FC = () => {
                 title={module.title}
                 description={module.description}
                 icon={module.icon}
-                iconBgColor="#2563eb"
+                iconBgColor="#4655FF"
                 iconSize="3rem"
                 iconWidth={20}
                 iconHeight={20}
@@ -103,10 +104,10 @@ const Testimonials: React.FC = () => {
         <div className="text-center mt-22">
           <div className="flex justify-center">
             <button
-              // onClick={onOpenTrialModal}
-              className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg font-normal text-base hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              onClick={onOpenTrialModal}
+              className="bg-[#4655FF] text-white px-8 py-3 rounded-lg font-normal text-base hover:bg-[#3b47d9] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Download Mobile App
+              Early Access
             </button>
           </div>
         </div>

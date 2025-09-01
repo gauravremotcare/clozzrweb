@@ -66,7 +66,7 @@ const USPSection: React.FC = () => {
                 key={index}
                 className="group bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl text-center w-full sm:w-[45%] lg:w-[30%]"
                 style={{
-                  border: "0.3px solid #2563eb",
+                  border: "0.3px solid #4655FF",
                 }}
               >
                 {/* Icon */}
@@ -74,17 +74,17 @@ const USPSection: React.FC = () => {
                   <div
                     className="w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
                     style={{
-                      backgroundColor: "#2563eb",
+                      backgroundColor: "#4655FF",
                     }}
                   >
-                    <Icon className="w-8 h-8" style={{ color: "#2563eb" }} />
+                    <Icon className="w-8 h-8" style={{ color: "#4655FF" }} />
                   </div>
                 </div>
 
                 {/* Title */}
                 <h3
                   className="text-xl font-semibold mb-4 transition-colors duration-300"
-                  style={{ color: "#2563eb" }}
+                  style={{ color: "#4655FF" }}
                 >
                   {usp.title}
                 </h3>
@@ -110,7 +110,7 @@ const USPSection: React.FC = () => {
         </div>
 
         <div className="flex justify-center">
-          <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg font-normal text-base hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+          <button className="bg-[#4655FF] text-white px-8 py-3 rounded-lg font-normal text-base hover:bg-[#3b47d9] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
             Join as a Partner
           </button>
         </div>

@@ -37,7 +37,7 @@ function App() {
       </section>
 
       <section id="testimonials">
-        <Testimonials />
+        <Testimonials onOpenTrialModal={() => setIsTrialModalOpen(true)} />
       </section>
 
       {/* <section id="pricing">
@@ -53,15 +53,13 @@ function App() {
       <ModalForm
         isOpen={isTrialModalOpen}
         onClose={() => setIsTrialModalOpen(false)}
-        title="Book Your Free Trial Class"
-        type="trial"
+        title="Get Your Early Access"
       />
 
       <ModalForm
         isOpen={isCounsellorModalOpen}
         onClose={() => setIsCounsellorModalOpen(false)}
         title="Talk to a Counsellor"
-        type="counsellor"
       />
 
       <ChatBotModal

@@ -43,23 +43,23 @@ const Contact = () => {
     console.log(form, "sending contact form");
 
     if (form.current) {
-      // emailjs
-      //   .sendForm(
-      //     "service_f0k1jz5", // Replace with your actual service ID
-      //     "template_j5uj72k", // Replace with your actual template ID
-      //     form.current,
-      //     "hdVUQq4cKYuDJtnXv" // Replace with your actual public key
-      //   )
-      //   .then(
-      //     (result) => {
-      //       console.log(result, "sending contact form");
-      //       setOpen(true);
-      //       form.current?.reset();
-      //     },
-      //     (error) => {
-      //       console.error("Error sending message:", error.text);
-      //     }
-      //   );
+      emailjs
+        .sendForm(
+          "service_f0k1jz5", // Replace with your actual service ID
+          "template_j5uj72k", // Replace with your actual template ID
+          form.current,
+          "hdVUQq4cKYuDJtnXv" // Replace with your actual public key
+        )
+        .then(
+          (result) => {
+            console.log(result, "sending contact form");
+            setOpen(true);
+            form.current?.reset();
+          },
+          (error) => {
+            console.error("Error sending message:", error.text);
+          }
+        );
     } else {
       console.error("Form reference is null");
     }

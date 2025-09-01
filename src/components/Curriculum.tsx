@@ -73,7 +73,7 @@ const Curriculum: React.FC = () => {
                 title={module.title}
                 description={module.description}
                 icon={module.icon}
-                iconBgColor="#2563eb"
+                iconBgColor="#4655FF"
                 iconSize="3rem"
                 iconWidth={20}
                 iconHeight={20}

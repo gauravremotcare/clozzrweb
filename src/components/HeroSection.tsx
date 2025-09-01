@@ -55,24 +55,23 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
               Become a valued member of remotcare community as a{" "}
               <a
                 href="/user"
-                style={{ color: Colors.textLink }}
-                className="underline"
+                className="underline text-[#4655FF] hover:text-[#3b47d9]"
               >
                 User
               </a>{" "}
               or a{" "}
               <a
                 href="/partner"
-                style={{ color: Colors.textLink }}
-                className="underline"
+                className="underline text-[#4655FF] hover:text-[#3b47d9]"
               >
                 Partner
               </a>
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
-                // onClick={onOpenTrialModal}
-                className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg font-normal text-base hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                onClick={onOpenTrialModal}
+                className="bg-[#4655FF] text-white px-8 py-3 rounded-lg font-normal text-base hover:bg-[#3b47d9] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Sign in - Early access
               </button>

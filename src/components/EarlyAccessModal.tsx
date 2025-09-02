@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, User, Mail, Phone, Briefcase, Loader2 } from "lucide-react";
+import { X, User, Mail, Phone, Loader2 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 interface ModalFormProps {
@@ -10,24 +10,28 @@ interface ModalFormProps {
   title: string;
 }
 
-const ModalForm: React.FC<ModalFormProps> = ({ isOpen, onClose, title }) => {
+const EarlyAccessModal: React.FC<ModalFormProps> = ({
+  isOpen,
+  onClose,
+  title,
+}) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    occupation: "",
+    lookingFor: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const occupations = [
-    "Doctor",
-    "Health Coach",
-    "Medical Professional",
-    "Nutritionist",
-    "Fitness Trainer",
-    "Therapist",
+  // Replace with "lookingFor" options relevant to SaaS/early access
+  const lookingForOptions = [
+    "Individual Use",
+    "Family or Friend Use",
+    "Business Use",
+    "Educational Use",
+    "Nonprofit Use",
     "Other",
   ];
 
@@ -52,7 +56,7 @@ const ModalForm: React.FC<ModalFormProps> = ({ isOpen, onClose, title }) => {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
-          occupation: formData.occupation,
+          occupation: formData.lookingFor,
           to_email: "gaurav.yadav@remotcare.com",
         },
         "qg4Y3DYOxrCG_urpF"
@@ -69,7 +73,7 @@ const ModalForm: React.FC<ModalFormProps> = ({ isOpen, onClose, title }) => {
     // Reset after success
     setTimeout(() => {
       setIsSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", occupation: "" });
+      setFormData({ name: "", email: "", phone: "", lookingFor: "" });
       onClose();
     }, 3000);
   };
@@ -154,23 +158,23 @@ const ModalForm: React.FC<ModalFormProps> = ({ isOpen, onClose, title }) => {
                 />
               </div>
 
-              {/* Occupation */}
+              {/* Looking For */}
               <div>
                 <label className="flex items-center text-sm font-medium text-gray-700 mb-2">
-                  <Briefcase className="w-4 h-4 mr-2" />
-                  Occupation
+                  <Loader2 className="w-4 h-4 mr-2" />
+                  Looking For
                 </label>
                 <select
-                  name="occupation"
-                  value={formData.occupation}
+                  name="lookingFor"
+                  value={formData.lookingFor}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg"
                   required
                 >
-                  <option value="">Select occupation</option>
-                  {occupations.map((occ) => (
-                    <option key={occ} value={occ}>
-                      {occ}
+                  <option value="">Select use case</option>
+                  {lookingForOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
                     </option>
                   ))}
                 </select>
@@ -199,4 +203,4 @@ const ModalForm: React.FC<ModalFormProps> = ({ isOpen, onClose, title }) => {
   );
 };
 
-export default ModalForm;
+export default EarlyAccessModal;

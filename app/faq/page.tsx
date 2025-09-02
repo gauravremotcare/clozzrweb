@@ -1,9 +1,11 @@
 "use client";
+
 import React, { useState } from "react";
 import Head from "next/head";
 import { Colors, gradients } from "@/src/assets/colors";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
+import { FaUserFriends, FaBriefcaseMedical } from "react-icons/fa";
 
 export default function PrivacyPolicy() {
   const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
@@ -17,113 +19,184 @@ export default function PrivacyPolicy() {
         >
           <Navbar onOpenTrialModal={() => setIsTrialModalOpen(true)} />
           <Head>
-            <title>Remotcare - faq</title>
+            <title>Remotcare - FAQ</title>
             <meta
               name="description"
-              content="Remotcare Privacy Policy - How we collect, use, disclose, and protect your personal data when you use our health tech services."
+              content="Remotcare FAQ - Answers to common questions about remote health monitoring, data privacy, device compatibility, and provider support."
             />
           </Head>
+
           <div
             className="flex flex-col min-h-screen"
             style={{ background: gradients.gradientbackground }}
           >
-            <div className="container mx-auto px-4 py-10 md:py-20">
-              <h1 className="text-3xl md:text-5xl font-bold text-center mb-8">
-                FAQ
+            <div className="container mx-auto px-4 py-10 md:py-20 max-w-5xl">
+              <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900">
+                ❓ Frequently Asked Questions (FAQ)
               </h1>
 
-              <div className="bg-white p-6 md:p-10 rounded-lg shadow-xl space-y-8">
-                {/* Intro */}
-                <section>
-                  <p className="mb-4">
-                    <strong>What is Remotcare and how does it work?</strong>
+              {/* Individuals & Families Section */}
+              <section className="mb-16">
+                <h2 className="flex items-center text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+                  <FaUserFriends className="mr-3 text-blue-600" size={28} />
+                  For Individuals & Families
+                </h2>
+
+                <article className="mb-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    1. What is Remotcare and how does it work?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Remotcare is a collaborative health technology platform for
+                    remote health monitoring and connected care. You can track
+                    your own health and that of your loved ones, access their
+                    reports, and connect with healthcare providers — all in one
+                    app.
                   </p>
-                  <p>
-                    A collaborative health technology platform is called
-                    Remotcare. where individuals may receive various forms of
-                    remote healthcare support while also monitoring the health
-                    of their relatives and friends. Even if he is not physically
-                    present, the person who would look after his or her loved
-                    ones can care for that family member virtually.
+                </article>
+
+                <article className="mb-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    2. How secure is the personal health data stored on
+                    Remotcare?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    We take your privacy very seriously. Remotcare is being
+                    developed with end-to-end encryption and strict access
+                    controls to protect your health data. We are actively
+                    working to align with international healthcare data
+                    standards such as HIPAA, GDPR, and India’s DPDP Act. As the
+                    platform grows, we will continue strengthening our security
+                    and compliance framework to ensure your data is always safe
+                    and private.
                   </p>
-                </section>
+                </article>
 
-                {/* 1. Information We Collect */}
-                <section>
-                  <h2 className="text-2xl font-bold mb-4">
-                    1. How secure is the personal health data recorded and
-                    stored on Remotcare?
-                  </h2>
-                  <p className="mb-4">
-                    The most advanced security standard currently being
-                    developed will be used by us.
+                <article className="mb-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    3. Can multiple family members or caregivers monitor the
+                    same individual’s health data?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Yes. You can grant access to trusted family members or
+                    caregivers, so they can monitor health information securely.
                   </p>
-                </section>
+                </article>
 
-                {/* 2. Use of Information */}
-                <section>
-                  <h2 className="text-2xl font-bold mb-4">
-                    2. Can multiple family members or caregivers’ access and
-                    monitor the same individual’s health data?
-                  </h2>
-
-                  <p className="mb-4">
-                    Yes, providing the owner of the data grants access, it can
-                    be utilised.
+                <article className="mb-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    4. Is Remotcare compatible with health devices and
+                    wearables?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Yes. Remotcare acts as a Health IoT aggregator, integrating
+                    data from popular wearables, smartwatches, and medical IoT
+                    devices into one place.
                   </p>
-                </section>
+                </article>
 
-                {/* 3. Use of Cookies */}
-                <section>
-                  <h2 className="text-2xl font-bold mb-4">
-                    3. Is Remotcare compatible with different types of health
-                    monitoring devices and wearables?
-                  </h2>
-                  <p className="mb-4">
-                    Yes, providing the owner of the data grants access, it can
-                    be utilised.
+                <article className="mb-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    5. Can I access past health data and generate reports for
+                    doctors?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Yes. All your historical data is stored and organized, and
+                    you can generate detailed health reports for medical
+                    consultations anytime.
                   </p>
-                </section>
+                </article>
 
-                {/* 4. Data Sharing */}
-                <section>
-                  <h2 className="text-2xl font-bold mb-4">
-                    4. Is Remotcare compatible with different types of health
-                    monitoring devices and wearables?
-                  </h2>
-
-                  <p className="mb-4">
-                    The Platform will indeed support a variety of health
-                    monitoring devices.
+                <article className="mb-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    6. Can I invite my family members or caregivers to join
+                    Remotcare?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Yes. You can invite family, relatives, or caregivers to stay
+                    connected and collaborate in managing health.
                   </p>
-                </section>
+                </article>
+              </section>
 
-                {/* 5. Links */}
-                <section>
-                  <h2 className="text-2xl font-bold mb-4">
-                    5. Can I access historical health data and generate reports
-                    for medical consultations?
-                  </h2>
-                  <p>
-                    Yes, if you have regularly updated data, the platform will
-                    give all of your past health data.
+              {/* Providers Section */}
+              <section>
+                <h2 className="flex items-center text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+                  <FaBriefcaseMedical
+                    className="mr-3 text-blue-600"
+                    size={28}
+                  />
+                  For Providers (Health Coaches, Dietitians, Doctors)
+                </h2>
+
+                <article className="mb-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    7. How can Remotcare help me as a health coach or dietitian?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Remotcare gives you a single platform to monitor your
+                    clients’ health data, offer personalized guidance, and build
+                    stronger client relationships. You can also create your
+                    professional profile and brand presence.
                   </p>
-                </section>
+                </article>
 
-                {/* 6. Security */}
-                <section>
-                  <h2 className="text-2xl font-bold mb-4">
-                    6. Can I invite other family members or caregivers to join
-                    the Remotcare platform?
-                  </h2>
-                  <p>
-                    Yes, you are welcome to invite all of your loved ones,
-                    friends, and carers.
+                <article className="mb-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    8. Can I bring my existing clients to Remotcare?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Yes. You can invite your existing clients to join Remotcare
+                    and provide them with a better digital health experience,
+                    including monitoring, analytics, and continuous engagement.
                   </p>
-                </section>
+                </article>
 
-                {/* 7. Rights */}
-              </div>
+                <article className="mb-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    9. Are there any platform fees or commissions?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    No. Remotcare charges zero platform fees for listing your
+                    services or working with your clients. All your earnings
+                    remain yours.
+                  </p>
+                </article>
+
+                <article className="mb-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    10. Does Remotcare support passive income opportunities?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Yes. Providers can earn passive income through referrals of
+                    other professionals or clients, in addition to revenue from
+                    their own services.
+                  </p>
+                </article>
+
+                <article className="mb-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    11. Can I collaborate with other professionals on the
+                    platform?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Yes. You can build and manage teams of assistants,
+                    nutritionists, or coaches and work collaboratively to serve
+                    your clients more effectively.
+                  </p>
+                </article>
+
+                <article className="mb-8">
+                  <h3 className="text-xl font-semibold mb-2">
+                    12. How secure is client data shared with providers?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Client data is protected with the same healthcare-grade
+                    security standards. Clients retain control of their data and
+                    grant explicit permissions to providers they trust.
+                  </p>
+                </article>
+              </section>
             </div>
           </div>
 

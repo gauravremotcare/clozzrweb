@@ -2,6 +2,7 @@
 
 import ChatBotModal from "@/src/components/ChatBotModal";
 import Curriculum from "@/src/components/Curriculum";
+import EarlyAccessModal from "@/src/components/EarlyAccessModal";
 import Footer from "@/src/components/Footer";
 import HeroSection from "@/src/components/HeroSection";
 import HowItWorks from "@/src/components/HowItWorks";
@@ -17,11 +18,11 @@ function App() {
   const [isCounsellorModalOpen, setIsCounsellorModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white ">
       <Navbar onOpenTrialModal={() => setIsTrialModalOpen(true)} />
 
       <section id="home">
-        <HeroSection onOpenTrialModal={() => setIsTrialModalOpen(true)} />
+        <HeroSection onOpenTrialModal={() => setIsCounsellorModalOpen(true)} />
       </section>
 
       <section id="curriculum">
@@ -29,7 +30,7 @@ function App() {
       </section>
 
       <section id="why-choose-us">
-        <USPSection />
+        <USPSection onOpenTrialModal={() => setIsTrialModalOpen(true)} />
       </section>
 
       <section id="how-it-works">
@@ -53,13 +54,13 @@ function App() {
       <ModalForm
         isOpen={isTrialModalOpen}
         onClose={() => setIsTrialModalOpen(false)}
-        title="Get Your Early Access"
+        title="Join Us"
       />
 
-      <ModalForm
+      <EarlyAccessModal
         isOpen={isCounsellorModalOpen}
         onClose={() => setIsCounsellorModalOpen(false)}
-        title="Talk to a Counsellor"
+        title="Get your Early access"
       />
 
       <ChatBotModal

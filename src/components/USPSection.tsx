@@ -9,7 +9,10 @@ import {
   StarBrandSVG,
 } from "../assets/images/Images";
 
-const USPSection: React.FC = () => {
+interface HeroSectionProps {
+  onOpenTrialModal: () => void;
+}
+const USPSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
   const usps = [
     {
       icon: StarBrandSVG,
@@ -110,7 +113,10 @@ const USPSection: React.FC = () => {
         </div>
 
         <div className="flex justify-center">
-          <button className="bg-[#4655FF] text-white px-8 py-3 rounded-lg font-normal text-base hover:bg-[#3b47d9] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+          <button
+            onClick={onOpenTrialModal}
+            className="bg-[#4655FF] text-white px-8 py-3 rounded-lg font-normal text-base hover:bg-[#3b47d9] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+          >
             Join as a Partner
           </button>
         </div>

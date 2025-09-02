@@ -1,7 +1,11 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
-import { Menu, X, HomeIcon, Home } from "lucide-react";
+import { Menu, X, Home } from "lucide-react";
+import { useRouter, usePathname } from "next/navigation";
 
 import { RemotCareLogo } from "../assets/images/Images";
+
 interface NavbarProps {
   onOpenTrialModal: () => void;
 }
@@ -10,6 +14,9 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenTrialModal }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+
+  const router = useRouter();
+  const pathname = usePathname();
 
   const navItems = [
     { id: "home", label: "Home", href: "#home" },
@@ -57,6 +64,18 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenTrialModal }) => {
     setIsMenuOpen(false);
   };
 
+  // Handler for logo and home button click
+  const handleHomeClick = () => {
+    if (pathname === "/") {
+      // Already home page, smooth scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Navigate to home page
+      router.push("/");
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -68,8 +87,12 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenTrialModal }) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="w-15 h-15   rounded-xl flex items-center justify-center">
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={handleHomeClick}
+            aria-label="Go to Home"
+          >
+            <div className="w-15 h-15 rounded-xl flex items-center justify-center">
               <RemotCareLogo />
             </div>
             <div className="hidden sm:block">
@@ -79,41 +102,25 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenTrialModal }) => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          {/* <div className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.href)}
-                className={`relative px-3 py-2 text-sm font-medium font-poppins transition-colors duration-200 ${
-                  activeSection === item.id
-                    ? "text-blue-600"
-                    : isScrolled
-                    ? "text-gray-700 hover:text-blue-600"
-                    : "text-gray-800 hover:text-blue-600"
-                }`}
-              >
-                {item.label}
-                {activeSection === item.id && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 rounded-full"></div>
-                )}
-              </button>
-            ))}
-          </div> */}
+          {/* Desktop Navigation - if needed */}
+          {/* ... (your desktop nav code here) */}
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <button
-              // onClick={onOpenTrialModal}
-              className=" text-white border border-indigo-400 px-4 py-2 rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-teal-700 transform hover:scale-105 transition-all duration-200  hover:shadow-xl"
+              onClick={handleHomeClick}
+              aria-label="Go to Home"
+              className="text-white border border-indigo-400 px-4 py-2 rounded-lg font-semibold text-sm hover:from-blue-700 hover:to-teal-700 transform hover:scale-105 transition-all duration-200 hover:shadow-xl"
             >
               <Home className="w-8 h-8 text-indigo-700 font-light" />
             </button>
           </div>
 
+          {/* Mobile menu toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center justify-center transition-colors duration-200"
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? (
               <X className="w-5 h-5 text-gray-600" />

@@ -19,14 +19,19 @@ export default function Footer() {
                   <span className="hover:underline">Contact</span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#">
                   <span className="hover:underline">Documentation</span>
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link href="#">
                   <span className="hover:underline">Blog</span>
+                </Link>
+              </li> */}
+              <li>
+                <Link href="/aboutus">
+                  <span className="hover:underline">About Us</span>
                 </Link>
               </li>
               <li>
@@ -86,15 +91,22 @@ export default function Footer() {
             fit with RemotCare
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white" aria-label="LinkedIn">
+            <a
+              href="https://www.linkedin.com/company/remotcare/"
+              className="hover:text-white"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedin size={20} />
             </a>
-            <a href="#" className="hover:text-white" aria-label="Twitter">
+
+            {/* <a href="#" className="hover:text-white" aria-label="Twitter">
               <FaTwitter size={20} />
             </a>
             <a href="#" className="hover:text-white" aria-label="Instagram">
               <FaInstagram size={20} />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

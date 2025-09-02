@@ -18,9 +18,17 @@ interface HeroSectionProps {
   onOpenTrialModal: () => void;
 }
 
+const scrollToId = (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+  e.preventDefault();
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
   return (
-    <section className="relative  bg-gradient-to-br from-blue-50 via-white to-teal-50 flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative bg-gradient-to-br from-blue-50 via-white to-teal-50 flex items-center justify-center overflow-hidden pt-20">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full opacity-20 animate-pulse"></div>
@@ -31,15 +39,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="text-center lg:text-left">
-            {/* <div className="flex items-center justify-center lg:justify-start mb-6">
-              <div className="flex items-center bg-orange-100 rounded-full px-4 py-2">
-                <Star className="w-4 h-4 text-orange-500 mr-2" />
-                <span className="text-orange-700 text-sm font-medium">
-                  Rated #1 Platform
-                </span>
-              </div>
-            </div> */}
-            <h1 className="text-4xl md:text-5xl  font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
               Your Intelligent Health Companion{" "}
               <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
                 For You
@@ -54,14 +54,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
             <p className="text-xl text-black mb-8 max-w-2xl">
               Become a valued member of remotcare community as a{" "}
               <a
-                href="/user"
+                href="#curriculum"
+                onClick={scrollToId("curriculum")}
                 className="underline text-[#4655FF] hover:text-[#3b47d9]"
               >
                 User
               </a>{" "}
               or a{" "}
               <a
-                href="/partner"
+                href="#why-choose-us"
+                onClick={scrollToId("why-choose-us")}
                 className="underline text-[#4655FF] hover:text-[#3b47d9]"
               >
                 Partner

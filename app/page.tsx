@@ -38,7 +38,7 @@ function App() {
       </section>
 
       <section id="testimonials">
-        <Testimonials onOpenTrialModal={() => setIsTrialModalOpen(true)} />
+        <Testimonials onOpenTrialModal={() => setIsCounsellorModalOpen(true)} />
       </section>
 
       {/* <section id="pricing">

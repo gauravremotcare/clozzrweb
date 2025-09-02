@@ -54,14 +54,14 @@ export default function Footer() {
                   <span className="hover:underline">Privacy Policy</span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/terms-and-conditions"
                   onClick={() => router.push("/terms-and-conditions")}
                 >
                   <span className="hover:underline">Terms and conditions</span>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

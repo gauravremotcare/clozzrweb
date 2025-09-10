@@ -26,7 +26,7 @@ function App() {
       </section>
 
       <section id="curriculum">
-        <Curriculum />
+        <Curriculum onOpenTrialModal={() => setIsTrialModalOpen(true)} />
       </section>
 
       <section id="why-choose-us">

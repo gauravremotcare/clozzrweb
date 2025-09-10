@@ -13,7 +13,10 @@ import AppDashboardScreen from "../assets/AppDashboardScreen.png";
 import AppSplashDemo from "../assets/AppSplashDemo.png";
 import HeadDesc from "./ui/HeadDesc";
 
-const Curriculum: React.FC = () => {
+interface CurriculumSectionProps {
+  onOpenTrialModal: () => void;
+}
+const Curriculum: React.FC<CurriculumSectionProps> = ({ onOpenTrialModal }) => {
   const modules = [
     {
       icon: MonitorSVG,
@@ -104,6 +107,14 @@ const Curriculum: React.FC = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="flex justify-center  mt-10">
+          <button
+            onClick={onOpenTrialModal}
+            className="bg-[#4655FF] text-white px-8 py-3 rounded-lg font-normal text-base hover:bg-[#3b47d9] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+          >
+            Sign in - Early access
+          </button>
         </div>
         {/* Footer Note
         <div className="text-center mt-12">

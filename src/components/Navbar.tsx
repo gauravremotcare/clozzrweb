@@ -96,9 +96,9 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenTrialModal }) => {
               <RemotCareLogo />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-poppins font-bold text-gray-900">
+              <p className="text-xl font-poppins font-bold text-gray-900">
                 Remotcare
-              </h1>
+              </p>
             </div>
           </div>
 

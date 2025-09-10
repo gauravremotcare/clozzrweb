@@ -40,11 +40,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
           {/* Left content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-              Your Intelligent Health Companion{" "}
+              Remote Health Monitoring{" "}
               <span className="bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                For You
+                For Your
               </span>{" "}
-              & Those You Care For
+              Loved Ones
             </h1>
             <p className="text-xl text-black mb-8 max-w-2xl">
               Remotcare empowers individuals and healthcare providers to
@@ -70,14 +70,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTrialModal }) => {
               </a>
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
                 onClick={onOpenTrialModal}
                 className="bg-[#4655FF] text-white px-8 py-3 rounded-lg font-normal text-base hover:bg-[#3b47d9] transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Sign in - Early access
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Right content - SVG background + Image above */}

@@ -1432,7 +1432,7 @@ export default function TermsAndConditions() {
                       payment information, if any, is subject to the
                       Remotcare&apos;s{" "}
                       <a
-                        href="/privacy-policy"
+                        href="/privacypolicy"
                         className="text-blue-600 hover:underline font-semibold"
                       >
                         Privacy Policy

@@ -48,7 +48,7 @@ const Contact = () => {
           "service_f0k1jz5", // Replace with your actual service ID
           "template_j5uj72k", // Replace with your actual template ID
           form.current,
-          "hdVUQq4cKYuDJtnXv" // Replace with your actual public key
+          "hdVUQq4cKYuDJtnXv", // Replace with your actual public key
         )
         .then(
           (result) => {
@@ -58,7 +58,7 @@ const Contact = () => {
           },
           (error) => {
             console.error("Error sending message:", error.text);
-          }
+          },
         );
     } else {
       console.error("Form reference is null");
@@ -167,7 +167,7 @@ const Contact = () => {
                       Phone Number
                     </h4>
                     <p className="text-base text-body-color text-black">
-                      +91 7695235552
+                      +91 7029201297
                     </p>
                   </div>
                 </div>
